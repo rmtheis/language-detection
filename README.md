@@ -1,4 +1,6 @@
-A fork of a Java language detection library ([language-detection](http://code.google.com/p/language-detection/)).
+# language-detection
+
+A fork of an excellent Java language detection library ([language-detection](http://code.google.com/p/language-detection/)) written by Nakatani Shuyo.
 
 This project contains the following additional profiles not contained in the original library:
 
@@ -21,15 +23,15 @@ This project contains the following additional profiles not contained in the ori
 
 These additional profiles were generated from Wikipedia abstracts the same way that the original profiles were generated.
 
-# Download
+## Download
 
     git clone git@github.com:rmtheis/language-detection.git
 
-# Using
+## Sample usage
 
 See [the original project on Google Code](http://code.google.com/p/language-detection/).
 
-# Training: Generating language profiles
+## Training: Generating language profiles
 
 To generate a language profile, [download](http://download.wikimedia.org) a Wikipedia abstract file to use as a training data set.
 
@@ -40,7 +42,7 @@ For example, click anwiki and download anwiki-20121227-abstract.xml to language-
     java -jar lib/langdetect.jar --genprofile -d language-detection/abstracts an
 
 
-# Batch test (for 21 languages only)
+## Batch test (for 21 languages only)
 
     cd language-detection
     wget http://language-detection.googlecode.com/files/europarl-test.zip
@@ -48,7 +50,7 @@ For example, click anwiki and download anwiki-20121227-abstract.xml to language-
     cd profiles
     java -jar ../lib/langdetect.jar --batchtest ../europarl.test    
 
-# Example batch test results
+## Example batch test results
 
     bg (989/1000=0.99): {bg=989, ru=2, mk=9}
     cs (995/1000=1.00): {sk=3, pt=1, en=1, cs=995}
@@ -73,6 +75,6 @@ For example, click anwiki and download anwiki-20121227-abstract.xml to language-
     sv (991/1000=0.99): {da=2, no=7, sv=991}
     total: 20856/21000 = 0.993
 
-# License
+## License
 
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
