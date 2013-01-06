@@ -22,8 +22,6 @@ This project contains the following additional profiles not contained in the ori
 - Welsh
 - Yiddish
 
-These additional profiles were generated from Wikipedia abstracts the same way that the original profiles were generated.
-
 ## Download
 
     git clone git@github.com:rmtheis/language-detection.git
