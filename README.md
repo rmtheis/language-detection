@@ -1,4 +1,5 @@
 # language-detection
+* * * 
 
 A fork of an excellent Java language detection library ([language-detection](http://code.google.com/p/language-detection/)) written by Nakatani Shuyo.
 
