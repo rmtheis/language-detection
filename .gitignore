@@ -1,0 +1,6 @@
+*.class
+*.war
+*.ear
+.settings
+bin/
+
