@@ -31,6 +31,15 @@ public class LangProfile {
     }
     
     /**
+     * Alternative constructor
+     */
+    public LangProfile(String name, HashMap<String, Integer> freq, int[] n_words) {
+        this.name = name;
+        this.freq = freq;
+        this.n_words = n_words;
+    }
+    
+    /**
      * Add n-gram to profile
      * @param gram
      */
