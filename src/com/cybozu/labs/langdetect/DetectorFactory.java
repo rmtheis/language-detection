@@ -94,10 +94,11 @@ public class DetectorFactory {
      * This method must be called once before language detection.
      *  
      * @param profileDirectory profile directory path
+     * @param p Place holder boolean, to get a different method signature
      * @throws LangDetectException  Can't open profiles(error code = {@link ErrorCode#FileLoadError})
      *                              or profile's format is wrong (error code = {@link ErrorCode#FormatError})
      */
-    public static void loadProfile(List<String> json_profiles) throws LangDetectException {
+    public static void loadProfile(List<String> json_profiles, boolean p) throws LangDetectException {
         int index = 0;
         int langsize = json_profiles.size();
         if (langsize < 2)
@@ -112,6 +113,24 @@ public class DetectorFactory {
                 throw new LangDetectException(ErrorCode.FormatError, "profile format error");
             }
         }
+    }
+
+    public static void loadProfile(List<LangProfile> profiles) throws LangDetectException {
+    	int index = 0;
+    	int langsize = profiles.size();
+    	if (langsize < 2)
+    		throw new LangDetectException(ErrorCode.NeedLoadProfileError, "Need more than 2 profiles");
+
+    	for (LangProfile profile: profiles) {
+    		try {
+    			//LangProfile profile = JSON.decode(json, LangProfile.class);
+    			addProfile(profile, index, langsize);
+    			++index;
+    		} catch (JSONException e) {
+    			throw new LangDetectException(ErrorCode.FormatError, "profile format error");
+    		}
+    	}
+
     }
 
     /**

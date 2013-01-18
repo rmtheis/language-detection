@@ -98,7 +98,7 @@ public class DetectorTest {
         ArrayList<String> profiles = new ArrayList<String>();
         profiles.add(JSON_LANG1);
         profiles.add(JSON_LANG2);
-        DetectorFactory.loadProfile(profiles);
+        DetectorFactory.loadProfile(profiles, false);
         List<String> langList = DetectorFactory.getLangList();
         assertEquals(langList.size(), 2);
         assertEquals(langList.get(0), "lang1");
