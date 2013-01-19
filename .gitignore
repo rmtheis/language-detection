@@ -3,4 +3,6 @@
 *.ear
 .settings
 bin/
+abstracts/
+.settings/
 
