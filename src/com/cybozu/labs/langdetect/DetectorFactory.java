@@ -122,13 +122,8 @@ public class DetectorFactory {
     		throw new LangDetectException(ErrorCode.NeedLoadProfileError, "Need more than 2 profiles");
 
     	for (LangProfile profile: profiles) {
-    		try {
-    			//LangProfile profile = JSON.decode(json, LangProfile.class);
-    			addProfile(profile, index, langsize);
-    			++index;
-    		} catch (JSONException e) {
-    			throw new LangDetectException(ErrorCode.FormatError, "profile format error");
-    		}
+    		addProfile(profile, index, langsize);
+    		++index;
     	}
 
     }
