@@ -6,24 +6,6 @@ import com.cybozu.labs.langdetect.*;
 
 public class LangDetectSample {
 
-  public static String PROFILES_DIR = "C:\\ocr\\language-detection\\profiles";
-
-  public void init(String profileDirectory) throws LangDetectException {
-    DetectorFactory.loadProfile(profileDirectory);
-  }
-  
-  public String detect(String text) throws LangDetectException {
-    Detector detector = DetectorFactory.create();
-    detector.append(text);
-    return detector.detect();
-  }
-  
-  public ArrayList<Language> detectLangs(String text) throws LangDetectException {
-    Detector detector = DetectorFactory.create();
-    detector.append(text);
-    return detector.getProbabilities();
-  }
-
   public static void main(String[] args) {
 
     long startTime;
@@ -34,7 +16,7 @@ public class LangDetectSample {
 
       // Initialize
       startTime = System.currentTimeMillis();  
-      DetectorFactory.loadProfile(PROFILES_DIR);
+      DetectorFactory.create();
       System.out.println("Initialization finished in " + (System.currentTimeMillis() - startTime) + " ms");
 
       // Detect

@@ -1,9 +1,23 @@
 # language-detection
 * * * 
 
-A fork of an excellent Java language detection library ([language-detection](http://code.google.com/p/language-detection/)) written by Nakatani Shuyo.
+[Language detection](http://en.wikipedia.org/wiki/Language_detection) for Android: Given a string 
+of text, identify what language the text is written in.
 
-This project contains the following additional profiles not contained in the original library:
+This project is a fork of an excellent Java language detection library 
+([language-detection](http://code.google.com/p/language-detection/)) written by Nakatani Shuyo. 
+The original git version control history and commit messages are retained in this project.
+
+## Changes
+
+I've made two significant changes to the original code:
+
+1. Speed enhancements. As an alternative to using JSON-based text files for storing language 
+profiles, a Python script is used to convert language profiles into Java code that can be bundled 
+with an app. With the resulting performance improvement, language detection is fast enough to run 
+acceptably on Android devices.
+
+2. Additional language profiles:
 
 - Aragonese
 - Asturian
@@ -18,7 +32,7 @@ This project contains the following additional profiles not contained in the ori
 - Malay
 - Maltese
 - Occitan
-- Serbian
+- Serbian (Cyrillic alphabet)
 - Welsh
 - Yiddish
 
@@ -32,14 +46,16 @@ See [the original project on Google Code](http://code.google.com/p/language-dete
 
 ## Training: Generating language profiles
 
-To generate a language profile, [download](http://download.wikimedia.org) a Wikipedia abstract file to use as a training data set.
+To generate a language profile, [download](http://download.wikimedia.org) a Wikipedia abstract 
+file to use as a training data set.
 
-For example, click anwiki and download anwiki-20121227-abstract.xml to language-detection/abstracts/ then do:
+For example, click `anwiki` and download `anwiki-20121227-abstract.xml` to 
+`language-detection/abstracts/` and do:
 
     cd language-detection
     mkdir abstracts/profiles
     java -jar lib/langdetect.jar --genprofile -d language-detection/abstracts an
-
+    python scripts/genprofile.py -i abstracts/profiles/an > AN.java
 
 ## Batch test (for 21 languages only)
 
@@ -49,7 +65,7 @@ For example, click anwiki and download anwiki-20121227-abstract.xml to language-
     cd profiles
     java -jar ../lib/langdetect.jar --batchtest ../europarl.test    
 
-## Example batch test results
+### Example batch test results
 
     bg (985/1000=0.99): {bg=985, ru=5, mk=10}
     cs (994/1000=0.99): {sk=5, en=1, cs=994}
