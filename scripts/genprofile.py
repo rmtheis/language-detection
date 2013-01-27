@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
 Converts a language-detection profile file into a Java class, with n-grams
