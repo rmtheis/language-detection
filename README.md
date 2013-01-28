@@ -44,12 +44,12 @@ acceptably on Android devices.
 
 See [the original project on Google Code](http://code.google.com/p/language-detection/).
 
-Set up profile list in `DetectorFactory.java`.
+Set up the language profile list in `DetectorFactory.java`.
 
 ## Training: Generating language profiles
 
-To generate a language profile, [download](http://download.wikimedia.org) a Wikipedia abstract 
-file to use as a training data set.
+To generate a language profile, [download](http://dumps.wikimedia.org/backup-index.html) a 
+Wikipedia abstract file to use as a training data set.
 
 For example, click `anwiki` and download `anwiki-20121227-abstract.xml` to 
 `language-detection/abstracts/` and do:
