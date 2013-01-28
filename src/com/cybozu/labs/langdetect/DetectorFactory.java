@@ -40,26 +40,76 @@ public class DetectorFactory {
         wordLangProbMap = new HashMap<String, double[]>();        
         langlist = new ArrayList<String>();
         profilelist = Arrays.asList(
-            (new AF()).getLangProfile(), // Afrikaans
-            (new EU()).getLangProfile(), // Basque
-            (new BG()).getLangProfile(), // Bulgarian
-            (new CA()).getLangProfile(), // Catalan
-            (new DA()).getLangProfile(), // Danish
-            (new NL()).getLangProfile(), // Dutch
-            (new EN()).getLangProfile(), // English
-            (new FR()).getLangProfile(), // French
-            (new GL()).getLangProfile(), // Galician
-            (new HT()).getLangProfile(), // Haitian Creole
-            (new IS()).getLangProfile(), // Icelandic
-            (new IT()).getLangProfile(), // Italian
-            (new MK()).getLangProfile(), // Macedonian
-            (new NO()).getLangProfile(), // Norwegian
-            (new OC()).getLangProfile(), // Occitan
-            (new PT()).getLangProfile(), // Portuguese
-            (new RO()).getLangProfile(), // Romanian
-            (new ES()).getLangProfile(), // Spanish
-            (new SV()).getLangProfile(), // Swedish
-            (new CY()).getLangProfile()  // Welsh
+                (new AF()).getLangProfile(), // Afrikaans
+                //(new SQ()).getLangProfile(), // Albanian
+                //(new AR()).getLangProfile(), // Arabic
+                //(new AN()).getLangProfile(), // Aragonese
+                //(new AST()).getLangProfile(), // Asturian
+                (new EU()).getLangProfile(), // Basque
+                //(new BE()).getLangProfile(), // Belarusian
+                //(new BN()).getLangProfile(), // Bengali
+                //(new BR()).getLangProfile(), // Breton
+                (new BG()).getLangProfile(), // Bulgarian
+                (new CA()).getLangProfile(), // Catalan
+                //(new ZHCN()).getLangProfile(), // Chinese (Simplified)
+                //(new ZHTW()).getLangProfile(), // Chinese (Traditional)
+                //(new HR()).getLangProfile(), // Croatian
+                //(new CS()).getLangProfile(), // Czech
+                (new DA()).getLangProfile(), // Danish
+                (new NL()).getLangProfile(), // Dutch
+                (new EN()).getLangProfile(), // English
+                //(new ET()).getLangProfile(), // Estonian
+                //(new FI()).getLangProfile(), // Finnish
+                (new FR()).getLangProfile(), // French
+                (new GL()).getLangProfile(), // Galician
+                //(new DE()).getLangProfile(), // German
+                //(new EL()).getLangProfile(), // Greek
+                //(new GU()).getLangProfile(), // Gujarati
+                (new HT()).getLangProfile(), // Haitian
+                //(new HE()).getLangProfile(), // Hebrew
+                //(new HI()).getLangProfile(), // Hindi
+                //(new HU()).getLangProfile(), // Hungarian
+                (new IS()).getLangProfile(), // Icelandic
+                //(new ID()).getLangProfile(), // Indonesian
+                //(new GA()).getLangProfile(), // Irish
+                (new IT()).getLangProfile(), // Italian
+                //(new JA()).getLangProfile(), // Japanese
+                //(new KN()).getLangProfile(), // Kannada
+                //(new KO()).getLangProfile(), // Korean
+                //(new LV()).getLangProfile(), // Latvian
+                //(new LT()).getLangProfile(), // Lithuanian
+                (new MK()).getLangProfile(), // Macedonian
+                //(new MS()).getLangProfile(), // Malay
+                //(new ML()).getLangProfile(), // Malayalam
+                //(new MT()).getLangProfile(), // Maltese
+                //(new MR()).getLangProfile(), // Marathi
+                //(new NE()).getLangProfile(), // Nepali
+                (new NO()).getLangProfile(), // Norwegian
+                (new OC()).getLangProfile(), // Occitan
+                //(new PA()).getLangProfile(), // Panjabi
+                //(new FA()).getLangProfile(), // Persian
+                //(new PL()).getLangProfile(), // Polish
+                (new PT()).getLangProfile(), // Portuguese
+                (new RO()).getLangProfile(), // Romanian
+                //(new RU()).getLangProfile(), // Russian
+                //(new SR()).getLangProfile(), // Serbian
+                //(new SK()).getLangProfile(), // Slovak
+                //(new SL()).getLangProfile(), // Slovene
+                //(new SO()).getLangProfile(), // Somali
+                (new ES()).getLangProfile(), // Spanish
+                //(new SW()).getLangProfile(), // Swahili
+                (new SV()).getLangProfile(), // Swedish
+                //(new TL()).getLangProfile(), // Tagalog
+                //(new TA()).getLangProfile(), // Tamil
+                //(new TE()).getLangProfile(), // Telugu
+                //(new TH()).getLangProfile(), // Thai
+                //(new TR()).getLangProfile(), // Turkish
+                //(new UK()).getLangProfile(), // Ukrainian
+                //(new UR()).getLangProfile(), // Urdu
+                //(new VI()).getLangProfile(), // Vietnamese
+                (new CY()).getLangProfile() // Welsh
+                //(new YI()).getLangProfile() // Yiddish
+
         ); 
     }
     static private DetectorFactory instance_ = new DetectorFactory();
