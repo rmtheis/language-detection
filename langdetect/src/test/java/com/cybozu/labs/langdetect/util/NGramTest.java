@@ -3,32 +3,16 @@
  */
 package com.cybozu.labs.langdetect.util;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 /**
  * @author Nakatani Shuyo
  *
  */
 public class NGramTest {
-
-    /**
-     * @throws java.lang.Exception
-     */
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    /**
-     * @throws java.lang.Exception
-     */
-    @After
-    public void tearDown() throws Exception {
-    }
 
     /**
      * Test method for constants
