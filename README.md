@@ -59,6 +59,27 @@ For example, click `anwiki` and download `anwiki-20121227-abstract.xml` to
     java -jar lib/langdetect.jar --genprofile -d language-detection/abstracts an
     python scripts/genprofile.py -i abstracts/profiles/an > AN.java
 
+## Maven
+
+Maven repository:
+
+    <repository>
+        <id>nitin.public.maven.repository.release</id>
+        <name>Nitin's Public Release Repository</name>
+        <url>https://raw.github.com/nitinverma/public.maven.repository/master/releases/</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+
+Maven dependency:
+
+        <dependency>
+            <groupId>com.cybozu.labs</groupId>
+            <artifactId>langdetect</artifactId>
+            <version>${com.cybozu.labs.version}</version>
+        </dependency>
+
 ## Android settings
 
 The hard-coded n-grams hashmap language profiles in this project may lead to memory problems 
