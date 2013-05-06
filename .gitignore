@@ -1,8 +1,7 @@
-*.class
-*.war
-*.ear
-.settings
 bin/
 abstracts/
 .settings/
+target/
+.idea/
+*.iml
 
