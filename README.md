@@ -59,6 +59,19 @@ For example, click `anwiki` and download `anwiki-20121227-abstract.xml` to
     java -jar lib/langdetect.jar --genprofile -d language-detection/abstracts an
     python scripts/genprofile.py -i abstracts/profiles/an > AN.java
 
+## Android settings
+
+The hard-coded n-grams hashmap language profiles in this project may lead to memory problems 
+during the build of an Android project containing the language profiles.
+ 
+To work around this, change the default max heap size setting for dx to 
+
+    defaultMx="-Xmx2048M" 
+
+in `android-sdk/platform-tools/dx` (or `dx.bat` on Windows).
+
+Building with ant may give better results than Eclipse.
+
 ## License
 
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
