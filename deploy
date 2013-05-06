@@ -1,0 +1,3 @@
+#!/bin/bash
+mvn -N clean install -f superpom/pom.xml
+mvn clean source:jar javadoc:jar deploy

@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.cybozu.labs</groupId>
+    <artifactId>superpom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Language Detection - Superpom</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <com.cybozu.labs.version>1.0-SNAPSHOT</com.cybozu.labs.version>
+        <com.rmtheis.version>${com.cybozu.labs.version}</com.rmtheis.version>
+        <org.apache.maven.plugins.maven-compiler-plugin.version>3.1</org.apache.maven.plugins.maven-compiler-plugin.version>
+        <jdk.version>1.6</jdk.version>
+        <source_jdk.version>${jdk.version}</source_jdk.version>
+        <target_jdk.version>${jdk.version}</target_jdk.version>
+
+        <org.testng.version>6.8</org.testng.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <log4j.version>1.2.17</log4j.version>
+
+    </properties>
+
+    <distributionManagement>
+
+        <repository>
+            <id>public.maven.repository.releases</id>
+            <name>Public Release Local Repository</name>
+            <url>file:////${user.home}/Codes/git/github/nitinverma/public.maven.repository/releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>public.maven.repository.snapshots</id>
+            <name>Public Snapshots Local Repository</name>
+            <url>file:////${user.home}/Codes/git/github/nitinverma/public.maven.repository/snapshots/</url>
+        </snapshotRepository>
+
+   </distributionManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
+                    <configuration>
+
+                        <fork>true</fork>
+                        <source>${source_jdk.version}</source>
+                        <target>${target_jdk.version}</target>
+                        <compilerArgs>
+                            <arg>-J-Xms128m</arg>
+                            <arg>-J-Xmx512m</arg>
+                        </compilerArgs>
+
+                    </configuration>
+
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>com.cybozu.labs</groupId>
+                <artifactId>langdetect-core</artifactId>
+                <version>${com.cybozu.labs.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rmtheis</groupId>
+                <artifactId>langdetect-profiles</artifactId>
+                <version>${com.rmtheis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cybozu.labs</groupId>
+                <artifactId>langdetect</artifactId>
+                <version>${com.cybozu.labs.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${org.testng.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.sun.jmx</groupId>
+                        <artifactId>jmxri</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.sun.jdmk</groupId>
+                        <artifactId>jmxtools</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.jms</groupId>
+                        <artifactId>jms</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+</project>
