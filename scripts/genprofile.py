@@ -67,7 +67,7 @@ for key, value in s['freq'].iteritems():
   private static void init2() {
     """
     cnt = 0;
-  key_str = unicodedata.normalize('NFKD', key).encode('utf-8', 'ignore')
+  key_str = unicodedata.normalize('NFC', key).encode('utf-8', 'ignore')
   print '    freq.put("%s", %s);' % (key_str, value)
 
 print """  }
