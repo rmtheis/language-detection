@@ -11,7 +11,12 @@ public class KO {
   private static final int[] n_words = new int[NGram.N_GRAM];
 
   public KO() {
-    init();  
+    init();
+    init2();
+    init3();
+    init4();
+    init5();
+    init6();
   }
 
   public final LangProfile getLangProfile() {
@@ -4022,8 +4027,6 @@ public class KO {
     freq.put("㎢이다", 412);
     freq.put("레이블", 111);
     freq.put("무엇", 78);
-
-    init2();
   }
   private static void init2() {
     
@@ -8027,10 +8030,8 @@ public class KO {
     freq.put("그룹의", 105);
     freq.put(" 부속", 114);
     freq.put("졌고 ", 82);
-
-    init2();
   }
-  private static void init2() {
+  private static void init3() {
     
     freq.put("경주시", 80);
     freq.put("정치가", 329);
@@ -12032,10 +12033,8 @@ public class KO {
     freq.put("높이 ", 126);
     freq.put("사회주", 304);
     freq.put("판의", 82);
-
-    init2();
   }
-  private static void init2() {
+  private static void init4() {
     
     freq.put("판은", 76);
     freq.put("건설되", 84);
@@ -16037,10 +16036,8 @@ public class KO {
     freq.put("제르", 165);
     freq.put("제를", 766);
     freq.put("연맹", 487);
-
-    init2();
   }
-  private static void init2() {
+  private static void init5() {
     
     freq.put("기스", 70);
     freq.put("났으", 129);
@@ -20042,10 +20039,8 @@ public class KO {
     freq.put("흐르", 181);
     freq.put("명확", 97);
     freq.put("관리자", 123);
-
-    init2();
   }
-  private static void init2() {
+  private static void init6() {
     
     freq.put("루 ", 753);
     freq.put("하기도", 550);
