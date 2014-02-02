@@ -8,6 +8,12 @@ This project is a fork of an excellent Java language detection library
 ([language-detection](http://code.google.com/p/language-detection/)) written by Nakatani Shuyo. 
 The original git version control history and commit messages are retained in this project.
 
+See also: [CLD2 - Compact Language Detection 2](https://code.google.com/p/cld2/)
+
+## NO LONGER MAINTAINED
+
+There are no plans to update this project, but feel free to fork the repo and have at it. 
+
 ## Changes
 
 I've made two significant changes to the original code:
