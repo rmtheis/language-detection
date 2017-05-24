@@ -12,7 +12,7 @@ The original git version control history and commit messages are retained in thi
 
 There are no plans to update this project, but feel free to fork the repo and have at it. 
 
-**2017-05-23 Update: Android O has introduced on-device language detection!
+**_2017-05-23 Update:_ Android O has introduced on-device language detection!
 See the [`TextClassificationManager.detectLanguages()`](https://developer.android.com/reference/android/view/textclassifier/TextClassificationManager.html#detectLanguages(java.lang.CharSequence))
 method in the text classification service.**
 
